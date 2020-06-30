@@ -1,0 +1,12 @@
+F:\C#\winform_1\winform_1\bin\Debug\winform_1.exe
+F:\C#\winform_1\winform_1\bin\Debug\winform_1.pdb
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.Form1.resources
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.Properties.Resources.resources
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.csproj.GenerateResource.Cache
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.exe
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.pdb
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.csprojResolveAssemblyReference.cache
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.Hello.resources
+F:\C#\winform_1\winform_1\obj\x86\Debug\winform_1.记事本.resources
+F:\C#\贪吃蛇\winform_1\obj\x86\Debug\winform_1.exe
+F:\C#\贪吃蛇\winform_1\obj\x86\Debug\winform_1.pdb
