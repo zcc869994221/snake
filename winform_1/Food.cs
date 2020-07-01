@@ -33,6 +33,7 @@ namespace winform_1
             X = rNumber.Next(left, right);//产生一个1到1000之间的任意一个数
             Y = rNumber.Next(top, bottom);//产生一个1到1000之间的任意一个数
             game.Controls.Remove(game.foods);
+
             game.foods.BackgroundImageLayout = ImageLayout.Stretch;//采用Stretch布局
             game.foods.Image = Image.FromFile(@"head.png");
             game.foods.Size = new System.Drawing.Size(20, 20);

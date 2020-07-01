@@ -12,7 +12,7 @@ namespace winform_1
     }
     public  class Dsnake:IPaint
     {
-        int pz=15;
+        int pz=15; //每次走的距离
         private Direction sdirection;
         public delegate Game Dgobj();
         public Dgobj Dgobjevent;
@@ -25,8 +25,8 @@ namespace winform_1
         #region 绘制蛇
         public void Paints()
         {
-            Graphics ga = Dgobjevent().CreateGraphics();
-            Brush bush= new SolidBrush(Color.Purple);
+            Graphics ga = Dgobjevent().CreateGraphics();//绘图
+            Brush bush= new SolidBrush(Color.Purple); //刷子
             for (int i=0;i<snak.Count;i++)
             {
                
@@ -78,9 +78,9 @@ namespace winform_1
         {
             Color bk = new Color();
             bk = Color.SeaShell;
-            Graphics ga = Dgobjevent().CreateGraphics();
+            Graphics ga = Dgobjevent().CreateGraphics(); //绘图
             Brush bush = new SolidBrush(bk);//填充的颜色
-            ga.DrawRectangle(new Pen(bk, 1), x, y, 20, 20);
+            ga.DrawRectangle(new Pen(bk, 1), x, y, 20, 20);//矩形
             ga.FillRectangle(bush, x, y, 20, 20);
         }
         #endregion

@@ -27,7 +27,6 @@ namespace winform_1
         {
             InitializeComponent();
         }
-        string xml_FilePath = "login.xml";//用来记录当前打开文件的路径的
         private void Form1_Load(object sender, EventArgs e)
         {
             SetWindowRegion();
@@ -35,7 +34,7 @@ namespace winform_1
             {
                 MySqlConnection con;
                 con = conn.Opendatabase();
-                con.Open();
+                con.Open();//打开通道，建立连接   
                 if (con.State!=ConnectionState.Open)
                 {
                     int i = 0;

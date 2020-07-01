@@ -31,7 +31,7 @@ namespace winform_1
         bool start = true;//记录游戏开始
         MysqlConn conn = new MysqlConn();
         public Label foods = new Label();
-        string xml_FilePath = "login.xml";//用来记录当前打开文件的路径的 可删
+        
         Dsnake dsnake;
         List<Point> snak;
         User us1;
@@ -148,27 +148,6 @@ namespace winform_1
         #region 保存用户分数
         public void Save()
         {
-            #region 将用户成绩保存到xml中
-            //User us1 = Gobjevent();
-            //XmlDocument xmlDocument = new XmlDocument();//新建一个XML“编辑器”
-            //xmlDocument.Load(xml_FilePath);//载入路径这个xml
-            //XmlNodeList xmlNodeList = xmlDocument.SelectSingleNode("UserInfo").ChildNodes;//选择class为根结点并得到旗下所有子节点
-            //foreach (XmlNode xmlNode in xmlNodeList)//遍历class的所有节点
-            //{
-            //    XmlElement xmlElement = (XmlElement)xmlNode;//对于任何一个元素，其实就是每一个<student>
-            //    //旗下的子节点<name>和<number>分别放入dataGridView3
-            //        if (us1.Username == xmlElement.ChildNodes.Item(0).InnerText)
-            //        {
-            //            if (us1.Score > Convert.ToInt16(xmlElement.ChildNodes.Item(2).InnerText))
-            //            {
-            //                xmlElement.ChildNodes.Item(2).InnerText = us1.Score.ToString();
-            //                xmlDocument.Save(@"login.xml");//保存xml文件
-            //            }
-            //            break;
-            //        }
-
-            //}
-            #endregion
             #region 将用户成绩保存到数据库中
             string _selectusname = "select score from usereport where usname='"+us1.Username+"'";
             string _updatasc = "UPDATE usereport SET score = '"+ us1.Score + "' WHERE usname = '"+us1.Username+"'";
@@ -180,42 +159,6 @@ namespace winform_1
         #region 排行榜
         public void Ranking()
         {
-            #region xml导出排行榜
-            //XmlDocument xmlDocument = new XmlDocument();//新建一个XML“编辑器”
-            //xmlDocument.Load(xml_FilePath);//载入路径这个xml
-            //XmlNodeList xmlNodeList = xmlDocument.SelectSingleNode("UserInfo").ChildNodes;//选择class为根结点并得到旗下所有子节点
-
-            //User[] uses = new User[xmlNodeList.Count];
-            //int i = 0;
-            //foreach (XmlNode xmlNode in xmlNodeList)//遍历class的所有节点
-            //{
-            //    XmlElement xmlElement = (XmlElement)xmlNode;//对于任何一个元素，其实就是每一个<student>
-            //    uses[i] = new User();
-            //    uses[i].Username = xmlElement.ChildNodes.Item(0).InnerText;
-            //    uses[i].Score = Convert.ToInt16(xmlElement.ChildNodes.Item(2).InnerText);
-            //    i++;
-            //}
-            //User temp = new User();
-            //for (int j = 1; j < uses.Length; j++)
-            //{
-            //    for (int k = 0; k < uses.Length - j; k++)
-            //    {
-            //        if (uses[k].Score < uses[k + 1].Score)
-            //        {
-            //            temp = uses[k];
-            //            uses[k] = uses[k + 1];
-            //            uses[k + 1] = temp;
-            //        }
-
-            //    }
-            //}
-            //string x = null;
-            //for (int j = 0; j < uses.Length; j++)
-            //{
-            //    x+= uses[j].Username + "  " + uses[j].Score + "\r\n";
-            //}
-            //paihang.Text = x;
-            #endregion
             #region 数据库导出排行榜
             string _selectussc = "select usname,score from usereport";
             DataTable dt=conn.Selectdatabase(_selectussc);
